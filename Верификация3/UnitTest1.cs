@@ -19,5 +19,11 @@ namespace Верификация3
             StructPattern pattern = new StructPattern();
             Assert.IsNotNull(pattern);
         }
+        [TestMethod]
+        public void InterfaceCreationClass()
+        {
+            Interface interf = new Interface();
+            Assert.IsNotNull(interf);
+        }
     }
 }
