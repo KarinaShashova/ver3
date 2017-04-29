@@ -37,8 +37,17 @@ namespace Верификация3
         {
             Interface interf = new Interface();
             interf.setName("Go");
-            Assert.AreEqual("interface Go", interf.stringname);
             Assert.AreEqual("Go", interf.name);
         }
+        [TestMethod]
+        public void GetInterface()
+        {
+            StructPattern pattern = new StructPattern();
+            Interface interf = new Interface();
+            interf.setName("Go");
+            pattern.setInterface(interf);
+            Assert.AreEqual(interf, pattern.interfaces);
+        }
+
     }
 }
