@@ -78,6 +78,13 @@ namespace Верификация3
             pattern.SetDependend(dep);
             Assert.AreEqual(dep, pattern.dependenses[0]);
         }
+        [TestMethod]
+        public void SetType()
+        {
+            Interface interf = new Interface();
+            interf.SetType("int");
+            Assert.AreEqual("int", interf.SetType);
+        }
 
     }
 }
