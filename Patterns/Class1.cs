@@ -12,7 +12,12 @@ namespace Patterns
     }
     public class StructPattern: Pattern
     {
+        public Interface interfaces;
         public StructPattern() { }
+        public void setInterface(Interface sinterf)
+        {
+            interfaces = sinterf;
+        }
     }
     public class Interface
     {
