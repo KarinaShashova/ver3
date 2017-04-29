@@ -118,5 +118,17 @@ namespace Верификация3
             pattern.SetPrivated();
             Assert.AreEqual("private: Cl1 ob ;", pattern.privated);
         }
+        [TestMethod]
+        public void AdpterSetPublced()
+        {
+            Adapter pattern = new Adapter();
+            Interface inter = new Interface();
+            inter.setName("Interf");
+            inter.SetType("int");
+            inter.SetMethod("Meth");
+            pattern.setInterface(inter);
+            pattern.SetPubliced();
+            Assert.AreEqual("public: virtual int Meth { }; }", pattern.publiced);
+        }
     }
 }
