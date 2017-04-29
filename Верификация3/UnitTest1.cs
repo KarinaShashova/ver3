@@ -130,5 +130,29 @@ namespace Верификация3
             pattern.SetPubliced();
             Assert.AreEqual("public: virtual int Meth { }; }", pattern.publiced);
         }
+        [TestMethod]
+        public void GetAdapterCode()
+        {
+            Adapter adapter = new Adapter();
+            Interface interf = new Interface();
+            DependedClass dep = new DependedClass();
+            string[] test = { "interface Interf {", "public: virtual int Method { }; }", "class Cl1{ }", "class Adapter :public Interf {", "private:  Cl1 cl ;", "public:  int Method {} ; }" };
+            interf.setName("Interf");
+            interf.SetType("int");
+            interf.SetMethod("Method");
+            dep.SetName("Cl1");
+            adapter.interfaces = interf;
+            adapter.dependenses.Add(dep);
+            adapter.SetName("Adapter");
+            adapter.objectname = "cl";
+            adapter.SetPrivated();
+            adapter.SetPubliced();
+            adapter.GetAdapterCode();
+            for (int i = 0; i < adapter.AdapterCode.Count; i++)
+            {
+                Assert.AreEqual(test[i], adapter.AdapterCode[i]);
+            }
+
+        }
     }
 }
