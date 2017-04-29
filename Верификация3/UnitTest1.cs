@@ -48,6 +48,12 @@ namespace Верификация3
             pattern.setInterface(interf);
             Assert.AreEqual(interf, pattern.interfaces);
         }
+        [TestMethod]
+        public void DependedCreationClass()
+        {
+            DependedClass depended = new DependedClass();
+            Assert.IsNotNull(depended);
+        }
 
     }
 }
