@@ -29,4 +29,8 @@ namespace Patterns
             name = sname;
         }
     }
+    public class DependedClass
+    {
+        public DependedClass() { }
+    }
 }
