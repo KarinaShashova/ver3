@@ -62,6 +62,13 @@ namespace Верификация3
             depended.SetName("Depend");
             Assert.AreEqual("class Depend { }", depended.name);
         }
+        [TestMethod]
+        public void DependedSetName()
+        {
+            DependedClass depended = new DependedClass();
+            depended.SetName("Depend");
+            Assert.AreEqual("Depend", depended.stringname);
+        }
 
     }
 }
