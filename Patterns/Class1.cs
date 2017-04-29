@@ -83,5 +83,14 @@ namespace Patterns
         {
             publiced = publiced + " " + interfaces.type + " " + interfaces.stringmethod + " {} ;";
         }
+        public void GetAdapterCode()
+        {
+            AdapterCode.Add(interfaces.stringname + " {");
+            AdapterCode.Add(interfaces.method + "}");
+            AdapterCode.Add(dependenses[0].name);
+            AdapterCode.Add(name + " :public " + interfaces.name + " {");
+            AdapterCode.Add(privated);
+            AdapterCode.Add(publiced + " }");
+        }
     }
 }
