@@ -13,5 +13,11 @@ namespace Верификация3
             Pattern pattern = new Pattern();
             Assert.IsNotNull(pattern);
         }
+        [TestMethod]
+        public void StructPatternCreationClass()
+        {
+            StructPattern pattern = new StructPattern();
+            Assert.IsNotNull(pattern);
+        }
     }
 }
