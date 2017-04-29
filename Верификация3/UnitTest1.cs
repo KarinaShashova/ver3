@@ -83,7 +83,7 @@ namespace Верификация3
         {
             Interface interf = new Interface();
             interf.SetType("int");
-            Assert.AreEqual("int", interf.SetType);
+            Assert.AreEqual("int", interf.type);
         }
 
     }
