@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Patterns
 {
-    public class Class1
+    public class Pattern
     {
-	//hi
+        public Pattern(){}
     }
 }
