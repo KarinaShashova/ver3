@@ -101,5 +101,11 @@ namespace Верификация3
             interf.SetMethod("InterfaceMethod");
             Assert.AreEqual("InterfaceMethod", interf.method);
         }
+        [TestMethod]
+        public void AdpterPatternCreationClass()
+        {
+            Adapter pattern = new Adapter();
+            Assert.IsNotNull(pattern);
+        }
     }
 }
