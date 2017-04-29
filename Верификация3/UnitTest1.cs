@@ -107,5 +107,16 @@ namespace Верификация3
             Adapter pattern = new Adapter();
             Assert.IsNotNull(pattern);
         }
+        [TestMethod]
+        public void AdpterSetPrivated()
+        {
+            Adapter pattern = new Adapter();
+            DependedClass dep= new DependedClass();
+            dep.SetName("Cl1");
+            pattern.objectname="ob";
+            pattern.SetDependend(dep);
+            pattern.SetPrivated();
+            Assert.AreEqual("private: Cl1 ob ;", pattern.privated);
+        }
     }
 }
