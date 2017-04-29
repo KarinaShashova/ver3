@@ -14,4 +14,8 @@ namespace Patterns
     {
         public StructPattern() { }
     }
+    public class Interface
+    {
+        public Interface() { }
+    }
 }
