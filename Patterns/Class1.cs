@@ -16,11 +16,12 @@ namespace Patterns
     }
     public class Interface
     {
-        public string stringname;
+        public string stringname, name;
         public Interface() { }
         public void setName(string sname)
         {
             stringname = "interface " + sname;
+            name = sname;
         }
     }
 }
