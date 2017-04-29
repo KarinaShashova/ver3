@@ -69,6 +69,15 @@ namespace Верификация3
             depended.SetName("Depend");
             Assert.AreEqual("Depend", depended.stringname);
         }
+        [TestMethod]
+        public void GetDependend()
+        {
+            StructPattern pattern = new StructPattern();
+            DependedClass dep = new DependedClass();
+            dep.SetName("Class1");
+            pattern.SetDependend(dep);
+            Assert.AreEqual(dep, pattern.dependenses[0]);
+        }
 
     }
 }

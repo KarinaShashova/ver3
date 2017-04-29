@@ -31,12 +31,12 @@ namespace Patterns
     }
     public class DependedClass
     {
-        public string name, strigname;
+        public string name, stringname;
         public DependedClass() { }
         public void SetName(string sname)
         {
             name = "class " + sname + "{ }";
-            strigname = sname;
+            stringname = sname;
         }
     }
 }
