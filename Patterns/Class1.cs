@@ -8,5 +8,6 @@ namespace Patterns
 {
     public class Class1
     {
+	//hi
     }
 }
