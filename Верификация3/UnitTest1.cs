@@ -55,5 +55,13 @@ namespace Верификация3
             Assert.IsNotNull(depended);
         }
 
+        [TestMethod]
+        public void DependedSetName()
+        {
+            DependedClass depended = new DependedClass();
+            depended.SetName("Depend");
+            Assert.AreEqual("class Depend { }", depended.name);
+        }
+
     }
 }
