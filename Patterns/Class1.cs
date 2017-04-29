@@ -64,7 +64,7 @@ namespace Patterns
         public DependedClass() { }
         public void SetName(string sname)
         {
-            name = "class " + sname + "{ }";
+            name = "class " + sname + " { }";
             stringname = sname;
         }
     }
@@ -81,12 +81,12 @@ namespace Patterns
         }
         public void SetPubliced()
         {
-            publiced = publiced + " " + interfaces.type + " " + interfaces.stringmethod + " {} ;";
+            publiced = publiced + " " + interfaces.type + " " + interfaces.method + " {} ;";
         }
         public void GetAdapterCode()
         {
             AdapterCode.Add(interfaces.stringname + " {");
-            AdapterCode.Add(interfaces.method + "}");
+            AdapterCode.Add(interfaces.stringmethod + "}");
             AdapterCode.Add(dependenses[0].name);
             AdapterCode.Add(name + " :public " + interfaces.name + " {");
             AdapterCode.Add(privated);

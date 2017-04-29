@@ -33,7 +33,7 @@ namespace Верификация3
             Assert.AreEqual("interface Go", interf.stringname);
         }
         [TestMethod]
-        public void InterfaceSetName()
+        public void InterfaceSetName1()
         {
             Interface interf = new Interface();
             interf.setName("Go");
@@ -63,7 +63,7 @@ namespace Верификация3
             Assert.AreEqual("class Depend { }", depended.name);
         }
         [TestMethod]
-        public void DependedSetName()
+        public void DependedSetName1()
         {
             DependedClass depended = new DependedClass();
             depended.SetName("Depend");
@@ -94,7 +94,7 @@ namespace Верификация3
             Assert.AreEqual("public: virtual int InterfaceMethod { }; ", interf.stringmethod);
         }
         [TestMethod]
-        public void SetInterfaceMethod()
+        public void SetInterfaceMethod1()
         {
             Interface interf = new Interface();
             interf.SetType("int");
@@ -116,7 +116,7 @@ namespace Верификация3
             pattern.objectname="ob";
             pattern.SetDependend(dep);
             pattern.SetPrivated();
-            Assert.AreEqual("private: Cl1 ob ;", pattern.privated);
+            Assert.AreEqual("private:  Cl1 ob ;", pattern.privated);
         }
         [TestMethod]
         public void AdpterSetPublced()
@@ -128,7 +128,7 @@ namespace Верификация3
             inter.SetMethod("Meth");
             pattern.setInterface(inter);
             pattern.SetPubliced();
-            Assert.AreEqual("public: virtual int Meth { }; }", pattern.publiced);
+            Assert.AreEqual("public:  int Meth {} ;", pattern.publiced);
         }
         [TestMethod]
         public void GetAdapterCode()
@@ -136,7 +136,7 @@ namespace Верификация3
             Adapter adapter = new Adapter();
             Interface interf = new Interface();
             DependedClass dep = new DependedClass();
-            string[] test = { "interface Interf {", "public: virtual int Method { }; }", "class Cl1{ }", "class Adapter :public Interf {", "private:  Cl1 cl ;", "public:  int Method {} ; }" };
+            string[] test = { "interface Interf {", "public: virtual int Method { }; }", "class Cl1 { }", "class Adapter :public Interf {", "private:  Cl1 cl ;", "public:  int Method {} ; }" };
             interf.setName("Interf");
             interf.SetType("int");
             interf.SetMethod("Method");
