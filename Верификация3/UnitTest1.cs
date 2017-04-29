@@ -25,5 +25,12 @@ namespace Верификация3
             Interface interf = new Interface();
             Assert.IsNotNull(interf);
         }
+        [TestMethod]
+        public void InterfaceSetName()
+        {
+            Interface interf = new Interface();
+            interf.setName("Go");
+            Assert.AreEqual("interface Go", interf.stringname);
+        }
     }
 }
