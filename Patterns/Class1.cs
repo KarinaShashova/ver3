@@ -57,4 +57,12 @@ namespace Patterns
             stringname = sname;
         }
     }
+    public class Adapter : StructPattern
+    {
+        public List<string> AdapterCode = new List<string>();
+        public string objectname;
+        public Adapter()
+        {
+        }
+    }
 }
