@@ -75,5 +75,9 @@ namespace Patterns
         public Adapter()
         {
         }
+        public void SetPrivated()
+        {
+            privated = privated + " " + dependenses[0].stringname + " " + objectname + " ;";
+        }
     }
 }
