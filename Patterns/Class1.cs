@@ -8,7 +8,18 @@ namespace Patterns
 {
     public class Pattern
     {
-        public Pattern(){}
+        public string name;
+        public string publiced;
+        public string privated;
+        public Pattern()
+        {
+           publiced = "public: ";
+           privated = "private: ";
+       }
+       public void SetName(string sname)
+       {
+           name = "class " + sname;
+       }
     }
     public class StructPattern: Pattern
     {
