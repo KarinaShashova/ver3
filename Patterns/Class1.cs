@@ -12,11 +12,17 @@ namespace Patterns
     }
     public class StructPattern: Pattern
     {
+        public List<DependedClass> dependenses = new List<DependedClass>();
         public Interface interfaces;
         public StructPattern() { }
         public void setInterface(Interface sinterf)
         {
             interfaces = sinterf;
+        }
+        public void SetDependend(DependedClass sdependenses)
+        {
+
+            dependenses.Add(sdependenses);
         }
     }
     public class Interface
