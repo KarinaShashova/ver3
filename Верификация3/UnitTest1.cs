@@ -85,6 +85,14 @@ namespace Верификация3
             interf.SetType("int");
             Assert.AreEqual("int", interf.type);
         }
+        [TestMethod]
+        public void SetInterfaceMethod()
+        {
+            Interface interf = new Interface();
+            interf.SetType("int");
+            interf.SetMethod("InterfaceMethod");
+            Assert.AreEqual("public: virtual int InterfaceMethod { }; ", interf.stringmethod);
+        }
 
     }
 }
