@@ -43,6 +43,7 @@ namespace Patterns
         public void SetMethod(string smethodname)
         {
             stringmethod = "public: virtual " + type + " " + smethodname + " { }; ";
+            method = smethodname;
             
         }
     }
