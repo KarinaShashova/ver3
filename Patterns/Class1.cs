@@ -79,5 +79,9 @@ namespace Patterns
         {
             privated = privated + " " + dependenses[0].stringname + " " + objectname + " ;";
         }
+        public void SetPubliced()
+        {
+            publiced = publiced + " " + interfaces.type + " " + interfaces.stringmethod + " {} ;";
+        }
     }
 }
