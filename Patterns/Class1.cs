@@ -29,15 +29,21 @@ namespace Patterns
     {
         public string stringname, name;
         public string type;
+        public string method, stringmethod;
         public Interface() { }
         public void setName(string sname)
         {
             stringname = "interface " + sname;
             name = sname;
         }
-        public void getType(string stype)
+        public void SetType(string stype)
         {
             type = stype;
+        }
+        public void SetMethod(string smethodname)
+        {
+            stringmethod = "public: virtual " + type + " " + smethodname + " { }; ";
+            
         }
     }
     public class DependedClass
