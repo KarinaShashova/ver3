@@ -28,11 +28,16 @@ namespace Patterns
     public class Interface
     {
         public string stringname, name;
+        public string type;
         public Interface() { }
         public void setName(string sname)
         {
             stringname = "interface " + sname;
             name = sname;
+        }
+        public void getType(string stype)
+        {
+            type = stype;
         }
     }
     public class DependedClass
