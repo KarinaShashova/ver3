@@ -10,4 +10,8 @@ namespace Patterns
     {
         public Pattern(){}
     }
+    public class StructPattern: Pattern
+    {
+        public StructPattern() { }
+    }
 }
